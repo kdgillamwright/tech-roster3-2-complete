@@ -12,6 +12,11 @@ export default function Tech({ technologies }:ComponentProps) {
 
             <div className="pb-1">Difficulty:</div>
             <div className="pb-2">
+                <i className="fas fa-square text-greyed-out pr-0.5"></i>
+                <i className="fas fa-square text-greyed-out pr-0.5"></i>
+                <i className="fas fa-square text-greyed-out pr-0.5"></i>
+                <i className="fas fa-square text-greyed-out pr-0.5"></i>
+                <i className="fas fa-square text-greyed-out pr-0.5"></i>                
             </div>
 
             <div className="py-2">Required in courses:</div>

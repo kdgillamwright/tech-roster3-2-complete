@@ -1,6 +1,6 @@
 import { getTechnologies } from '@/tools/DataManager';
 
-export default function Tech() {
+export default function Tech({ technologies }:ComponentProps) {
 
     // ---------------------------------- render to the DOM
     return(

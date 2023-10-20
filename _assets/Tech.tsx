@@ -1,4 +1,6 @@
-export function Tech() {
+import { getTechnologies } from '@/tools/DataManager';
+
+export default function Tech() {
 
     // ---------------------------------- render to the DOM
     return(
@@ -15,4 +17,12 @@ export function Tech() {
             <div className="py-2">Required in courses:</div>
         </div>
     );
+}
+
+export async function getServerSideProps() {
+    return {
+      props: {
+        technologies: await getTechnologies()
+      }
+    }
 }

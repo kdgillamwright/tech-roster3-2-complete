@@ -18,8 +18,11 @@ export async function getTechnologies() {
         let db:Db = mongoClient.db(MONGO_DB_NAME);
         // get reference to desired collection in DB
         let collection:Collection<Technology> = db.collection<Technology>(MONGO_COLLECTION_TECHS);
+
         // get all documents of collection
         let cursor:FindCursor = collection.find();        
+        // let cursor:FindCursor = collection.find({"difficulty":{$gte:5}});
+
         // get array of documents from cursor (ASYNC task)
         techArray = await cursor.toArray();
         // need to convert ObjectId objects to strings

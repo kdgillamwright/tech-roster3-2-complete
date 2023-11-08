@@ -1,14 +1,17 @@
 import { getTechnologies } from '@/tools/DataManager';
-import { Technology } from '@/tools/data.model';
+import { Technology, ComponentProps } from '@/tools/data.model';
+import { List } from "@/components/List";
 
-export default function Home({ technologies }:{technologies:Technology[]}) {
+export default function Home({ technologies }:ComponentProps) {
 
   return (
-    <div className="text-blue-400 font-bold text-xl p-4">
-      <pre>
-      {JSON.stringify(technologies, null, "\t")}
-      </pre>
-    </div>
+    <>
+      {technologies.length > 0 ?
+        <List technologies={technologies} />
+      :
+        <>There are currently no technologies in the database :(</>
+      }
+    </>
   )
 }
 

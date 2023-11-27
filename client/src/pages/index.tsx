@@ -2,14 +2,15 @@ import { getTechnologies } from '@/tools/DataManager';
 import { Technology, ComponentProps } from '@/tools/data.model';
 import { List } from "@/components/List";
 
-export default function Home({ technologies }:ComponentProps) {
+export default function Home({ technologies }: ComponentProps) {
 
   return (
     <>
-      {technologies.length > 0 ?
-        <List technologies={technologies} />
-      :
-        <>There are currently no technologies in the database :(</>
+      {
+        (technologies.length > 0) ?
+          <List technologies={technologies} />
+          :
+          <>There are currently no technologies in the database :(</>
       }
     </>
   )
